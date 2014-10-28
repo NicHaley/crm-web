@@ -21,4 +21,5 @@ post '/contacts' do
 	# Creates a new contact from the Contact class using the param input
 	new_contact = Contact.new(params[:first_name], params[:last_name], params[:email], params[:note])
 	$rolodex.add_contact(new_contact)
+	redirect to('/contacts')
 end
