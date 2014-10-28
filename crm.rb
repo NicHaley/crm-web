@@ -1,4 +1,5 @@
 require 'sinatra'
+require './contact'
 
 get '/' do
 	@crm_app_name = "Nic's CRM"		# To be passed along to view
