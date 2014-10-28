@@ -1,5 +1,8 @@
 require 'sinatra'					# Load server gem
 require './contact'					# Gain access to relevant ruby files
+require './rolodex'
+
+$rolodex = Rolodex.new
 
 get '/' do
 	@crm_app_name = "Nic's CRM"		# To be passed along to view
@@ -7,12 +10,6 @@ get '/' do
 end
 
 get '/contacts' do
-	@contacts = []
-	@contacts << Contact.new("Nicholas", "Haley", "nicholaswilliamhaley@gmail.com", "Student")
-	@contacts << Contact.new("Kristel", "Tang", "Unknown", "Student")
-	@contacts << Contact.new("Julie", "Hache", "julie@bitmakerlabs.com", "Instructor")
-	@contacts << Contact.new("Lord", "Voldemort", "dieharry@haggrid.com", "Dark Lord")
-
 	erb :contacts
 end
 
