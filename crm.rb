@@ -5,8 +5,8 @@ require './rolodex'
 $rolodex = Rolodex.new
 
 get '/' do
-	@crm_app_name = "the Bitmaker CRM"		# To be passed along to view
-	erb :index								# Links to HTML (erb) index file
+	@crm_app_name = "the Bitmaker CRM"		# To be passed along to view (index.erb)
+	erb :index								# Links to HTML (erb) index file. Get explanation on this format
 end
 
 get '/contacts' do

@@ -1,0 +1,40 @@
+body {
+	margin: 0
+}
+
+.navbar {
+	background-color: #31698A;
+	margin: 0px 0px 2px 0px;
+	padding: 0px;
+}
+
+header {
+	display: inline-block;
+	vertical-align: top;
+}
+
+header > h2 {
+	color: orange;
+	margin: 0px 0px 0px 10px;
+	padding: 0px 0px 0px;
+	display: inline-block;
+	font-size: 40px;
+}
+
+header > h3 {
+	color: orange;
+	margin: 32px 0px -10px 10px;
+	padding: 0px;
+	font-size: 26px;
+}
+
+#menuimage {
+	margin: 10px 0px 0px 10px;
+	height: 80px;
+	width: 80px;
+	border-radius: 3px;
+}
+
+nav {
+	display: inline-block;
+}
