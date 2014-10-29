@@ -1,11 +1,11 @@
 body {
-	margin: 0
+	margin: 0px;
 }
 
 .navbar {
 	background-color: #31698A;
-	margin: 0px 0px 2px 0px;
-	padding: 0px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 1px 0px;
 }
 
 header {
@@ -15,26 +15,62 @@ header {
 
 header > h2 {
 	color: orange;
-	margin: 0px 0px 0px 10px;
+	margin: 0px 0px 0px 5px;
 	padding: 0px 0px 0px;
 	display: inline-block;
-	font-size: 40px;
+	font-size: 32px;
 }
 
 header > h3 {
 	color: orange;
-	margin: 32px 0px -10px 10px;
+	margin: 20px 0px -8px 5px;
 	padding: 0px;
-	font-size: 26px;
+	font-size: 22px;
 }
 
 #menuimage {
-	margin: 10px 0px 0px 10px;
-	height: 80px;
-	width: 80px;
+	margin: 8px 0px 0px 8px;
+	height: 60px;
+	width: 60px;
 	border-radius: 3px;
+}
+
+#speakerimage {
+	height: 120px;
+	width: 120px;
 }
 
 nav {
 	display: inline-block;
 }
+
+footer {
+	clear: both;
+	font-size: 12px;
+	text-align: center;
+}
+
+.left {
+	background-color: #f6f8ff;
+	display: inline-block;
+	width: 30%;
+	float: left;
+}
+
+.right {
+	background-color: green;
+	display: inline-block;
+	width: 70%;
+	float: right;
+	vertical-align: top;
+}
+
+
+
+
+
+
+
+
+
+
