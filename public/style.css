@@ -1,5 +1,6 @@
 body {
 	margin: 0px;
+	height: 800px;
 }
 
 .navbar {
@@ -36,8 +37,8 @@ header > h3 {
 }
 
 #speakerimage {
-	height: 120px;
-	width: 120px;
+	height: 200px;
+	width: 200px;
 }
 
 nav {
@@ -55,22 +56,51 @@ footer {
 	display: inline-block;
 	width: 30%;
 	float: left;
+	height: 100%;
 }
 
 .right {
-	background-color: green;
+	text-align: center;
 	display: inline-block;
 	width: 70%;
 	float: right;
 	vertical-align: top;
+	height: 100%;
 }
 
+aside > div > h3 {
+	margin: 100px 30px 10px 70px;
+}
 
+aside > div > p {
+	margin: 20px 30px 10px 100px;
+}
 
+#viewsymb {
+	width: 100px;
+	height: 100px;
+	margin: 50px;
+	vertical-align: middle;
+}
 
+#addsymb {
+	width: 60px;
+	height: 60px;
+	margin: 50px;
+	vertical-align: middle;
+}
 
+#modsymb {
+	width: 70px;
+	height: 70px;
+	margin: 50px;
+	vertical-align: middle;
+}
 
-
-
-
+#searchsymb {
+	width: 60px;
+	height: 60px;
+	margin: 50px;
+	vertical-align: middle;
+}
 
