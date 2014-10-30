@@ -33,7 +33,7 @@ post '/contacts' do
 end
 
 get "/contacts/:id" do
-	@contact = $rolodex.find(params[:id].to_i)
+	@contact = $rolodex.find(params[:id].to_i)		# Input param ID comes from URL input
 	if @contact
 		erb :show_contact
 	else
@@ -41,6 +41,14 @@ get "/contacts/:id" do
 	end
 end
 
+get "/contacts/:id/edit" do
+  @contact = @@rolodex.find(params[:id].to_i)
+  if @contact
+    erb :edit_contact
+  else
+    raise Sinatra::NotFound
+  end
+end
 
 # Search a contact page
 # get '/contacts/search' do
