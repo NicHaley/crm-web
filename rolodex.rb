@@ -12,7 +12,7 @@ class Rolodex   #Stores multiple contacts
     @id += 1
   end
 
-  def find_contact(contact_id)
+  def find(contact_id)
    @contacts.find {|contact| contact.id == contact_id }
  end
 end

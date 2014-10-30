@@ -1,9 +1,11 @@
 require 'sinatra'					# Load server gem
+require 'sinatra/reloader'
 require './contact'					# Gain access to relevant ruby files
 require './rolodex'
 require 'pry'
 
 $rolodex = Rolodex.new
+$rolodex.add_contact(Contact.new("Johnny", "Bravo", "johnny@bitmakerlabs.com", "Rockstar"))
 
 # Main Menu
 get '/' do
@@ -29,24 +31,46 @@ post '/contacts' do
 	redirect to('/contacts')
 end
 
+get "/contacts/1000" do
+  @contact = $rolodex.find(1000)
+  erb :show_contact
+end
+
+
+
+
 # Search a contact page
-get '/contacts/search' do
-	erb :search_menu
-end
+# get '/contacts/search' do
+# 	if params[:id]
+# 		id_input = (params[:id].to_i)
+# 		@contact = $rolodex.find(id_input)
+# 		if @contact
+# 			redirect to("/contacts/#{@contact.id}")
+# 		else
+# 			@error = "Contact ##{id_input} not found"
+# 		end
+# 		erb :search_menu
+# 	else
+# 		erb :search_menu
+# 	end
+# end
 
-# Search a contact post
-post '/contacts/search' do							# Not sure if this is correct
-	id_input = (params[:id].to_i)
-	@contact = $rolodex.find_contact(id_input)
-	if @contact
-		redirect to("/contacts/#{@contact.id}")
-	else
-		raise Sinatra::NotFound
-	end
-end
+# # Display searched contact page
+# get '/contacts/:id' do
+# 	@contact = $rolodex.find_contact(params[:id].to_i)
+# 	erb :show_contact
+# end
 
-# Display searched contact page
-get '/contacts/:id' do
-	@contact = $rolodex.find_contact(params[:id].to_i)
-	erb :show_contact
-end
+
+
+
+
+
+
+
+
+
+
+
+
+
