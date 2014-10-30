@@ -6,6 +6,7 @@ require 'pry'
 
 $rolodex = Rolodex.new
 $rolodex.add_contact(Contact.new("Johnny", "Bravo", "johnny@bitmakerlabs.com", "Rockstar"))
+$rolodex.add_contact(Contact.new("Nic", "Haley", "nicholaswilliamhaley@gmail.com", "Student"))
 
 # Main Menu
 get '/' do
@@ -31,12 +32,14 @@ post '/contacts' do
 	redirect to('/contacts')
 end
 
-get "/contacts/1000" do
-  @contact = $rolodex.find(1000)
-  erb :show_contact
+get "/contacts/:id" do
+	@contact = $rolodex.find(params[:id].to_i)
+	if @contact
+		erb :show_contact
+	else
+		raise Sinatra::NotFound
+	end
 end
-
-
 
 
 # Search a contact page
