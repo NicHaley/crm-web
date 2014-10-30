@@ -1,6 +1,7 @@
 body {
 	margin: 0px;
-	height: 800px;
+	height: 700px;
+	font-family: Helvetica;
 }
 
 .navbar {
@@ -39,6 +40,7 @@ header > h3 {
 #speakerimage {
 	height: 200px;
 	width: 200px;
+	margin-top: -10px;
 }
 
 nav {
@@ -49,6 +51,8 @@ footer {
 	clear: both;
 	font-size: 12px;
 	text-align: center;
+	background-color: #31698A;
+	padding: 5px 5px;
 }
 
 .left {
@@ -60,6 +64,7 @@ footer {
 }
 
 .right {
+	background-color: #fdfdfd;
 	text-align: center;
 	display: inline-block;
 	width: 70%;
@@ -69,38 +74,64 @@ footer {
 }
 
 aside > div > h3 {
-	margin: 100px 30px 10px 70px;
+	margin: 175px 30px 10px 70px;
 }
 
 aside > div > p {
-	margin: 20px 30px 10px 100px;
+	margin: 20px 30px 0px 100px;
 }
 
 #viewsymb {
 	width: 100px;
 	height: 100px;
-	margin: 50px;
+	margin: 100px 50px 20px 10px;
 	vertical-align: middle;
 }
 
 #addsymb {
 	width: 60px;
 	height: 60px;
-	margin: 50px;
+	margin: 100px 50px 20px 50px;
 	vertical-align: middle;
 }
 
 #modsymb {
 	width: 70px;
 	height: 70px;
-	margin: 50px;
+	margin: 100px 50px 20px 20px;
 	vertical-align: middle;
 }
 
 #searchsymb {
 	width: 60px;
 	height: 60px;
-	margin: 50px;
+	margin: 100px 50px 20px 70px;
 	vertical-align: middle;
 }
+
+#deletesymb {
+	width: 60px;
+	height: 60px;
+	margin: 100px 50px 20px 50px;
+	vertical-align: middle;
+}
+
+#attrsymb {
+	width: 60px;
+	height: 60px;
+	margin: 100px 50px 20px 50px;
+	vertical-align: middle;
+}
+
+.descriptors {
+	display: inline-block;
+	margin: 20px 80px 0px 80px;
+}
+
+.right > h1 {
+	text-decoration: underline;
+}
+
+
+
 
