@@ -2,13 +2,23 @@
 </div>
 
 <div class="right">
-	<h1>Create new Contact</h1>
+	<h1>Create New Contact</h1>
 
-	<form action="/contacts" method="post">			<!-- Post method to add data -->
-		<input type="text" name="first_name">		<!-- Text inputs -->
-		<input type="text" name="last_name">
-		<input type="text" name="email">
-		<input type="text" name="note">
+	<form action="/contacts" method="post">		
+		<p>
+			<label for="first">First Name:</label>
+			<input id="first" type="text" name="first_name" placeholder="eg. Darth">
+		</p>
+
+		<label for="last">Last Name:</label>
+		<input id="last" type="text" name="last_name" placeholder="eg. Vader">
+
+		<label for="email">Email:</label>
+		<input id="email" type="text" name="email" placeholder="eg. dieluke@deathstar.com">
+
+		<label for="note">Notes:</label>
+		<input id="note" type="text" name="note" placeholder="eg. Dark lord">
+
 		<input type="submit" name="Submit">			<!-- Submit button -->
 	</form>
 </div>

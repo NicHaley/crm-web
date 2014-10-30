@@ -21,5 +21,15 @@ post '/contacts' do
 	# Creates a new contact from the Contact class using the param input
 	new_contact = Contact.new(params[:first_name], params[:last_name], params[:email], params[:note])
 	$rolodex.add_contact(new_contact)
-	redirect to('/contacts')
+	# redirect to('/contacts')
+end
+
+get '/contacts/search' do
+	erb :search_menu
+end
+
+get "contacts/:id" do
+	# Create search method in here?
+	@contact = $rolodex.find(params[:id].to_i)
+	erb :show_contact
 end
