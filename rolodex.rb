@@ -3,7 +3,7 @@ class Rolodex   #Stores multiple contacts
 
   def initialize
     @contacts = []
-    @id = 0
+    @id = 1000
   end
 
   def add_contact(contact)
@@ -11,4 +11,8 @@ class Rolodex   #Stores multiple contacts
     @contacts << contact
     @id += 1
   end
+
+  def find_contact(contact_id)
+   @contacts.find {|contact| contact.id == contact_id }
+ end
 end
