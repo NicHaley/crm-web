@@ -1,12 +1,24 @@
 require 'sinatra'					# Load server gem
 require 'sinatra/reloader'
-require './contact'					# Gain access to relevant ruby files
 require './rolodex'
 require 'data_mapper'
 
 DataMapper.setup(:default, "sqlite3:database.sqlite3")
 
 $rolodex = Rolodex.new
+
+class Contact
+	include DataMapper::Resource
+
+	property :id, Serial			#Serial: An integer that automatically increments
+	property :first_name, String
+	property :last_name, String
+	property :email, String
+	property :note, String
+end
+
+DataMapper.finalize
+DataMapper.auto_upgrade!
 
 # Main Menu
 get '/' do
