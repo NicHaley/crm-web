@@ -2,11 +2,11 @@ require 'sinatra'					# Load server gem
 require 'sinatra/reloader'
 require './contact'					# Gain access to relevant ruby files
 require './rolodex'
-require 'pry'
+require 'data_mapper'
+
+DataMapper.setup(:default, "sqlite3:database.sqlite3")
 
 $rolodex = Rolodex.new
-$rolodex.add_contact(Contact.new("Johnny", "Bravo", "johnny@bitmakerlabs.com", "Rockstar"))
-$rolodex.add_contact(Contact.new("Nic", "Haley", "nicholaswilliamhaley@gmail.com", "Student"))
 
 # Main Menu
 get '/' do
@@ -31,6 +31,10 @@ post '/contacts' do
 	$rolodex.add_contact(new_contact)
 	redirect to('/contacts')
 end
+
+# get '/contacts/search' do	#THIS NEEDS TO BE FIXED!
+# 	erb :search_menu
+# end
 
 get "/contacts/:id" do
 	@contact = $rolodex.find(params[:id].to_i)		# Input param ID comes from URL input

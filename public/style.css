@@ -109,20 +109,6 @@ aside > div > p {
 	vertical-align: middle;
 }
 
-#deletesymb {
-	width: 90px;
-	height: 90px;
-	margin: 80px 50px 20px 50px;
-	vertical-align: middle;
-}
-
-#attrsymb {
-	width: 90px;
-	height: 90px;
-	margin: 80px 50px 20px 50px;
-	vertical-align: middle;
-}
-
 .icon {
 	display: inline-block;
 }
