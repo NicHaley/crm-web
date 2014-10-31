@@ -42,51 +42,37 @@ get "/contacts/:id" do
 end
 
 get "/contacts/:id/edit" do
-  @contact = $rolodex.find(params[:id].to_i)
-  if @contact
-    erb :edit_contact
-  else
-    raise Sinatra::NotFound
-  end
+	@contact = $rolodex.find(params[:id].to_i)
+	if @contact
+		erb :edit_contact
+	else
+		raise Sinatra::NotFound
+	end
 end
 
 put "/contacts/:id" do								# This is to record and send modified info to the server
-  @contact = $rolodex.find(params[:id].to_i)
-  if @contact
-    @contact.first_name = params[:first_name]
-    @contact.last_name = params[:last_name]
-    @contact.email = params[:email]
-    @contact.note = params[:note]
+	@contact = $rolodex.find(params[:id].to_i)
+	if @contact
+		@contact.first_name = params[:first_name]
+		@contact.last_name = params[:last_name]
+		@contact.email = params[:email]
+		@contact.note = params[:note]
 
-    redirect to("/contacts")
-  else
-    raise Sinatra::NotFound
-  end
+		redirect to("/contacts")
+	else
+		raise Sinatra::NotFound
+	end
 end
 
-# Search a contact page
-# get '/contacts/search' do
-# 	if params[:id]
-# 		id_input = (params[:id].to_i)
-# 		@contact = $rolodex.find(id_input)
-# 		if @contact
-# 			redirect to("/contacts/#{@contact.id}")
-# 		else
-# 			@error = "Contact ##{id_input} not found"
-# 		end
-# 		erb :search_menu
-# 	else
-# 		erb :search_menu
-# 	end
-# end
-
-# # Display searched contact page
-# get '/contacts/:id' do
-# 	@contact = $rolodex.find_contact(params[:id].to_i)
-# 	erb :show_contact
-# end
-
-
+delete "/contacts/:id" do
+	@contact = $rolodex.find(params[:id].to_i)
+	if @contact
+		$rolodex.remove_contact(@contact)
+		redirect to("/contacts")
+	else
+		raise Sinatra::NotFound
+	end
+end
 
 
 
