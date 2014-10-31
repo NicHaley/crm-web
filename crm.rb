@@ -1,6 +1,5 @@
 require 'sinatra'					# Load server gem
 require 'sinatra/reloader'
-require './rolodex'
 require 'data_mapper'
 
 DataMapper.setup(:default, "sqlite3:database.sqlite3")
@@ -47,10 +46,22 @@ post '/contacts' do
 	redirect to('/contacts')
 end
 
-# get '/contacts/search' do	#THIS NEEDS TO BE FIXED!
-# 	erb :search_menu
-# end
+# Search menu page
+get '/contacts/search' do	
+	erb :search_menu
+end
 
+# Takes input id parameter from search page and brings user to that contact
+post '/contacts/search' do
+	@contact = Contact.get(params[:id].to_i)		
+	if @contact
+		redirect to("/contacts/#{@contact.id}")
+	else
+		raise Sinatra::NotFound
+	end
+end
+
+# Specific contact page
 get "/contacts/:id" do
 	@contact = Contact.get(params[:id].to_i)		
 	if @contact
