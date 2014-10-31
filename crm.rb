@@ -5,7 +5,7 @@ require 'data_mapper'
 
 DataMapper.setup(:default, "sqlite3:database.sqlite3")
 
-$rolodex = Rolodex.new
+# $rolodex = Rolodex.new
 
 class Contact
 	include DataMapper::Resource
@@ -28,6 +28,7 @@ end
 
 # All contacts page
 get '/contacts' do
+	@contacts = Contact.all 				# Store all Contacts in @contacts var
 	erb :contacts
 end
 
@@ -39,8 +40,12 @@ end
 # Add a contact post
 post '/contacts' do
 	# Creates a new contact from the Contact class using the param input
-	new_contact = Contact.new(params[:first_name], params[:last_name], params[:email], params[:note])
-	$rolodex.add_contact(new_contact)
+	new_contact = Contact.create(
+		:first_name => params[:first_name], 
+		:last_name => params[:last_name], 
+		:email => params[:email], 
+		:note => params[:note]
+		)
 	redirect to('/contacts')
 end
 
