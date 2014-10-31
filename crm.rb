@@ -54,7 +54,7 @@ end
 # end
 
 get "/contacts/:id" do
-	@contact = $rolodex.find(params[:id].to_i)		# Input param ID comes from URL input
+	@contact = Contact.get(params[:id].to_i)		
 	if @contact
 		erb :show_contact
 	else
