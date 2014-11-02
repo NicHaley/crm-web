@@ -1,23 +1,20 @@
-<div class="left">
-	<aside>
-		<div>
-			<h3>You are on the contacts page!</h3>
-			<p>Information for all Bitmaker clients, including name, email, and notes can be found to the right.</p>
-			<p>If you would like to modify any client information, please click on the name of the individual(highlighted).</p>
-		</div>
-		<img id="speakerimage" src="http://etc-mysitemyway.s3.amazonaws.com/icons/legacy-previews/icons/orange-fiesta-icons-media/002339-orange-fiesta-icon-media-loud-speaker.png" />
-	</aside>
-</div>
-
-<div class="right">
+<div class="top">
 	<h1>All Contacts</h1>
-	<% @contacts.each do |contact| %>
-	<a href="/contacts/<%= contact.id %>">
-		<%= contact.first_name %> 
-		<%= contact.last_name %>
-	</a>
-	<%= contact.email %>
-	<%= contact.note %>
-	<br>
-	<% end %>
+	<div>
+		<% @contacts.each do |contact| %>
+		<p>
+			<span><%= contact.id %>:</span>
+			<span>
+				<a href="/contacts/<%= contact.id %>">
+					<%= contact.first_name%> 
+				</a>
+				<a href="/contacts/<%= contact.id %>">
+					<%= contact.last_name%>
+				</a>
+			</span>
+			<span>Email: <%= contact.email %></span>
+			<span>Note: <%= contact.note %></span>
+		</p>
+		<% end %>
+	</div>
 </div>

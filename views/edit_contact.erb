@@ -1,10 +1,22 @@
-<h1>Edit a Contact</h1>
+<div class="top">
+	<h1>Edit a Contact</h1>
 
-<form action="/contacts/<%= @contact.id %>" method="post">
-  <input type="hidden" name="_method" value="put">		<!-- This hidden method is used so that we can use 'puts'. HTML does not support it natively-->
-  <input type="text" name="first_name" value="<%= @contact.first_name %>">
-  <input type="text" name="last_name" value="<%= @contact.last_name %>">
-  <input type="text" name="email" value="<%= @contact.email %>">
-  <input type="text" name="note" value="<%= @contact.note %>">
-  <input type="submit" name="Submit">
-</form>
+	<div>
+		<form action="/contacts/<%= @contact.id %>" method="post">
+			<input type="hidden" name="_method" value="put">		<!-- This hidden method is used so that we can use 'puts'. HTML does not support it natively-->
+			<label for="first_name">First Name: </label>
+			<input id="first_name" type="text" name="first_name" value="<%= @contact.first_name %>"></br>
+
+			<label for="last_name">Last Name: </label>
+			<input id="last_name" type="text" name="last_name" value="<%= @contact.last_name %>"></br>
+
+			<label for="email">Email: </label>
+			<input id="email" type="text" name="email" value="<%= @contact.email %>"></br>
+
+			<label for="note">Note: </label>
+			<input id="note" type="text" name="note" value="<%= @contact.note %>"></br>
+
+			<input type="submit" name="Submit">
+		</form>
+	</div>
+</div>

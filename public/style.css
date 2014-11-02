@@ -1,126 +1,87 @@
 body {
+	height: 600px;
 	margin: 0px;
-	height: 700px;
-	font-family: Helvetica;
-}
-
-.navbar {
-	background-color: #31698A;
-	margin: 0px 0px 0px 0px;
-	padding: 0px 0px 1px 0px;
-}
-
-header {
-	display: inline-block;
-	vertical-align: top;
-}
-
-header > h2 {
-	color: orange;
-	margin: 0px 0px 0px 5px;
-	padding: 0px 0px 0px;
-	display: inline-block;
-	font-size: 32px;
-}
-
-header > h3 {
-	color: orange;
-	margin: 20px 0px -8px 5px;
-	padding: 0px;
-	font-size: 22px;
+	font-family: 'Bevan'
 }
 
 #menuimage {
-	margin: 8px 0px 0px 8px;
-	height: 60px;
-	width: 60px;
-	border-radius: 3px;
-}
-
-#speakerimage {
-	height: 200px;
-	width: 200px;
-	margin-top: -10px;
-}
-
-nav {
-	display: inline-block;
-}
-
-footer {
-	clear: both;
-	font-size: 12px;
-	text-align: center;
-	background-color: #31698A;
-	padding: 5px 5px;
-}
-
-.left {
-	background-color: #e1e7ff;
-	display: inline-block;
-	width: 30%;
-	float: left;
-	height: 100%;
-}
-
-.right {
-	background-color: #f4f6ff;
-	text-align: center;
-	display: inline-block;
-	width: 70%;
-	float: right;
-	vertical-align: top;
-	height: 100%;
-}
-
-aside > div > h3 {
-	margin: 175px 30px 10px 70px;
-}
-
-aside > div > p {
-	margin: 20px 30px 0px 100px;
+	width: 260px;
+	height: 260px;
+	margin: 0px 10px 10px 0px;
+	vertical-align: middle;
+	z-index: 0;
 }
 
 #viewsymb {
-	width: 150px;
-	height: 150px;
-	margin: 65px 50px 20px 10px;
+	width: 170px;
+	height: 170px;
+	margin: 45px 10px 10px 10px;
 	vertical-align: middle;
 }
 
 #addsymb {
-	width: 90px;
-	height: 90px;
-	margin: 80px 50px 20px 50px;
-	vertical-align: middle;
-}
-
-#modsymb {
-	width: 105px;
-	height: 105px;
-	margin: 65px 55px 20px 20px;
+	width: 110px;
+	height: 110px;
+	margin: 35px 30px 20px 30px;
 	vertical-align: middle;
 }
 
 #searchsymb {
-	width: 90px;
-	height: 90px;
-	margin: 80px 60px 20px 70px;
+	width: 110px;
+	height: 110px;
+	margin: 40px 60px 20px 40px;
 	vertical-align: middle;
+	padding-right: 20px;
 }
 
 .icon {
 	display: inline-block;
 }
 
-.descriptors {
-	display: inline-block;
-	margin: 20px 80px 0px 80px;
+nav {
+	text-align: center;
+	margin: 0px;
 }
 
-.right > h1 {
-	text-decoration: underline;
+footer {
+	text-align: center;
+	font-size: 8px;
+	margin-top: 135px;
 }
+
+.top {
+	margin: 0px;
+	background-color: #14acde;
+	text-align: center;
+}
+
+.top > h1 {
+	font-size: 40px;
+	padding: 100px 0px 65px 0px;
+	margin: 0px;
+}
+
+.top > p {
+	padding-bottom: 105px;
+	margin: 0px;
+}
+
+span {
+	margin: 7px;
+}
+
+.top > div {
+	padding-bottom: 105px;
+}
+
+.top > div > p {
+	margin: 0px;
+}
+
+.color {
+	color: #ab1e24;
+}
+
 
 
 

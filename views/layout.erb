@@ -4,20 +4,26 @@
 	<meta charset="UTF-8">
 	<link type="text/css" rel="stylesheet" href="/style.css"/>
 	<title>Customer Contacts</title>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Nixie+One|Poiret+One|Reenie+Beanie|Pacifico|Dancing+Script|Amatic+SC|Lobster+Two|Bevan|Abril+Fatface|Roboto|Patua+One' rel='stylesheet' type='text/css'>
 </head>
 <body>
+	<%= yield %>
 	<div class="navbar">
 		<nav>
-			<a href="/">
+			<a class="icon" href="/">
 				<img id="menuimage" src="http://media.tumblr.com/b4fa52b407b1a65464d66162f1d4187f/tumblr_inline_mr9xcpNWPZ1qz4rgp.png"/>
 			</a>
+			<a class="icon" href="/contacts">
+				<img id="viewsymb" src="http://cdn.flaticon.com/png/256/37090.png" />
+			</a>
+			<a class="icon" href="/contacts/new">
+				<img id="addsymb" src="https://cdn2.iconfinder.com/data/icons/picol-vector/32/group_half_add-128.png" />
+			</a>
+			<a class="icon" href="/contacts/search">
+				<img id="searchsymb" src="http://www.clipartbest.com/cliparts/4T9/EnE/4T9EnEaac.png" />
+			</a>
 		</nav>
-		<header class="navbar">
-			<h3>Bitmaker Labs</h3>
-			<h2>Communications</h2>
-		</header>
 	</div>
-	<%= yield %>
 	<footer>Page developed by Nicholas Haley - 2014</footer>
 </body>
 </html>
